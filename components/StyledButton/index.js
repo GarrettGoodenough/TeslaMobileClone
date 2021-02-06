@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Pressable, LogBox } from "react-native";
+import { View, Text, Pressable, LogBox, Linking } from "react-native";
 import styles from "./styles.js";
 
 const StyledButton = (props) => {
@@ -12,9 +12,7 @@ const StyledButton = (props) => {
     <View style={styles.container}>
       <Pressable
         style={[styles.button, { backgroundColor: backgroundColor }]}
-        onPress={() => {
-          onPress();
-        }}
+        onPress={() => onPress()}
       >
         <Text style={[styles.text, { color: textColor }]}>{content}</Text>
       </Pressable>
